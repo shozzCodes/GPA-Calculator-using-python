@@ -24,22 +24,6 @@ def setGrads(score: int):
     else:
         return "Invalid!"
     
-
-# def viewGrades(info: list):
-    
-#     gdPoints = 0
-#     print("VIEWING GRADES")
-#     print("==============")
-#     if info != None:
-#         for i in range(0,len(info)):
-#             grade, gpa = setGrads(info[i]["Score"])
-#             print(f"Name: {info[i]["Name"]}")
-#             print(f"Units: {info[i]["Credits"]}")
-#             print(f"Grade: {grade}")
-#             gdPoints += gpa * info[i]["Credits"]
-#             print()
-#     result = gdPoints / TOT_CRD
-#     print("Current sem gpa: ",result.__round__(2))
 def viewReport(courses: list):
     print("="*60)
     print(f"{'Semester Report':^60}")
@@ -55,7 +39,6 @@ def viewReport(courses: list):
     print("-"*60)
     result = gdPoints / TOT_CRD
     print("GPA: ",result)
-
 
 print("="*60)
 print(f"{'GPA Calculator':^60}")
