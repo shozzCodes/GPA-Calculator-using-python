@@ -23,7 +23,31 @@ def setGrads(score: int):
         return "F", 0
     else:
         return "Invalid!"
-    
+def setGPA(score: float):
+    if score == 4.00:
+        return "A"
+    elif score >= 3.66 and score < 4.00:
+        return "A-"
+    elif score >= 3.33 and score < 3.66:
+        return "B+"
+    elif score >= 3.00 and score < 3.33:
+        return "B"
+    elif score >= 2.66 and score < 3.00:
+        return "B-"
+    elif score >= 2.33 and score < 2.66:
+        return "C+"
+    elif score >= 2.00 and score < 2.33:
+        return "C"
+    elif score >= 1.66 and score < 2.00:
+        return "C-"
+    elif score >= 1.33 and score < 1.66:
+        return "D+"
+    elif score >= 1.00 and score < 1.33:
+        return "D"
+    elif score < 1.00 and score >= 0:
+        return "F"
+    else:
+        return "Invalid!" 
 def viewReport(courses: list):
     print("="*60)
     print(f"{'Semester Report':^60}")
@@ -38,7 +62,8 @@ def viewReport(courses: list):
             gdPoints += gpa * course["Credits"]
     print("-"*60)
     result = gdPoints / TOT_CRD
-    print("GPA: ",result)
+    print("GPA: ",f"{result:.2f}")
+    print("Overall Grade: ", setGPA(result))
 
 print("="*60)
 print(f"{'GPA Calculator':^60}")
